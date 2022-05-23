@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+
+
+
+        <h2>Calculator</h2>
+
+            <input id="a" type="text">
+            <input id="b"  type="text">
+    <br>
+    <button id="cong" onclick="ketqua(this.id)">Addition(+)</button>
+    <button id="tru" onclick="ketqua(this.id)">Subtracsion(-)</button>
+    <button id="nhan" onclick="ketqua(this.id)">Mulipcation(*)</button>
+    <button id="chia" onclick="ketqua(this.id)">Division(/)</button>
+
+</form>
+<script>
+    function ketqua(tinhtoan) {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        if (tinhtoan == "cong")  {
+            alert(a + b);
+           } else if (tinhtoan == "tru"){
+            alert(a - b);
+           }else if(tinhtoan =="nhan"){
+            alert(a*b);
+           }else if(tinhtoan =="chia"){
+            alert(a/b);
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th><input type="text" id="tiente"></th>
+            <th><select id="fromCurrency">
+                <option value="VND">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+            </th>
+            <th>
+                <select id="toCurrency">
+                    <option value="USD">USD</option>
+                    <option value="VND">VietNam</option>
+                </select>
+            </th>
+            <th><input type="submit" onclick="convert()"></th>
+            <p id="amount"></p>
+    </tr>
+    </table>
+</form>
+
+<script>
+    function convert() {
+        let amount = parseInt(document.getElementById("tiente").value);
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+
+        if (isNaN(amount) || amount <= 0) {
+            alert("sorry");
+        } else if (fromCurrency == "USD" && toCurrency == "VND") {
+            alert(amount * 23000);
+        } else if (fromCurrency == "VND" && toCurrency == "USD") {
+            alert(amount / 23000);
+        } else {
+            alert(" không thể thực hiện được");
+        }
+
+
+    }
+
+</script>
+</body>
+</html>
