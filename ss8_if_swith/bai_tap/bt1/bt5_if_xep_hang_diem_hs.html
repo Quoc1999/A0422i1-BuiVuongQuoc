@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let test=parseInt(prompt("the test is: "));
+    let midterm=parseInt(prompt("the midterm is: "));
+    let endterm=parseInt(prompt("the endterm is: "));
+    let summary=(test+midterm*2+endterm*3)/6;
+    if(summary<=4){
+        alert("Học lực yếu");
+
+    }else if(summary<=6.5){
+        alert("Học lực trung bình");
+    }else if(summary<8){
+        alert("Học lực khá");
+
+    }else{
+        alert("Học lực giỏi");
+    }
+</script>
+
+
+</body>
+</html>

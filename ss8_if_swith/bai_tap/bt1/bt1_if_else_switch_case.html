@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let bai=prompt("mời bạn nhập số bài (1-7):");
+    switch (bai) {
+        case "1":
+
+            let A = parseInt(prompt("the number A : "));
+            let B = parseInt(prompt("the number B: "));
+            if (A % B == 0) {
+                alert("a is divisible by b");
+
+            } else {
+                alert("a is not divisible by b");
+            }
+            break;
+        case "2":
+            let age = parseInt(prompt("What the age: "));
+            if (age < 15) {
+                alert("student is not the hight class");
+            }
+            break;
+        case "3":
+            let a = parseInt(prompt("the number a is: "));
+            if (a > 0) {
+                alert("the number a greater than 0");
+            } else if (a < 0) {
+                alert("the number a less than 0");
+
+            } else {
+                alert("the number a equals 0");
+            }
+            break;
+        case "4":
+            let so1 = parseInt(prompt("the number a: "));
+            let so2 = parseInt(prompt("the number b: "));
+            let so3 = parseInt(prompt("the number c: "));
+            let max = so1;
+            if (max < so2) {
+                max = so2;
+            }
+            if (max < so3) {
+                max = so3;
+            }
+            alert(max + " là số lớn nhất");
+            break;
+        case "5":
+
+            let test=parseInt(prompt("the test is: "));
+            let midterm=parseInt(prompt("the midterm is: "));
+            let endterm=parseInt(prompt("the endterm is: "));
+            let summary=(test+midterm*2+endterm*3)/6;
+            if(summary<=4){
+                alert("Học lực yếu");
+
+            }else if(summary<=6.5){
+                alert("Học lực trung bình");
+            }else if(summary<8){
+                alert("Học lực khá");
+            }else{
+                alert("Học lực giỏi");
+            }
+            break;
+        case "6":
+            let tong=parseFloat(prompt("mời bạn nhập tổng tiền bán hàng: "));
+            let donHang=parseFloat(prompt("mời bạn nhập phần trăm hoa hồng"));
+            let tienHoaHong=0;
+            if(tong>20000000){
+                tienHoaHong=(tong/50*donHang);
+            }else if(tong>10000000){
+                tienHoaHong=(tong/80*donHang);
+            }else{
+                tienHoaHong=(tong/100*donHang);
+            }
+            alert("tiền hoa hồng của bạn là:"+ tienHoaHong);
+            break;
+        case "7":
+            let phut=parseFloat(prompt("mời bạn nhập số phút đã gọi: "));
+            let phiCoDinh=25;
+            let phi;
+            if(phut>200){
+                phi=((phut-200)*200+150*400+50*600);
+            }else if(phut>50){
+                phi=((phut-50)*400+50*600);
+            }else{
+                phi=phut*600;
+            }
+            let tong=0.01*phi+phiCoDinh;
+            alert("số tiền bạn cần nộp là: " + tong);
+    }
+</script>
+
+
+</body>
+</html>

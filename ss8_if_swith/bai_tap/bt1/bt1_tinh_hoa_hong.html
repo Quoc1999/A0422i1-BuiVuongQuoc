@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tong=parseFloat(prompt("mời bạn nhập tổng tiền bán hàng: "));
+    let donHang=parseFloat(prompt("mời bạn nhập phần trăm hoa hồng"));
+    let tienHoaHong=0;
+    if(tong>20000000){
+        tienHoaHong=(tong/50*donHang);
+    }else if(tong>10000000){
+        tienHoaHong=(tong/80*donHang);
+    }else{
+        tienHoaHong=(tong/100*donHang);
+    }
+    alert("tiền hoa hồng của bạn là:"+ tienHoaHong);
+
+</script>
+</body>
+</html>
